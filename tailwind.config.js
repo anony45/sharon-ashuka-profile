@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./*.html"],
+  darkMode:"media",
   theme: {
     screens:{
       sm:"480px",

@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 /*landing page*/
 .landingpage{
-    background-image: url("back.jpg");
+    background-image: url("/image/back.jpg");
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -122,8 +123,8 @@
   background-color: #ef9273;
   
 }
-.aboutpage{
-  background-color: #c8d8e4;
+.about{
+  font-family: 'Source Sans Pro', sans-serif;
 
 }
 
@@ -140,6 +141,7 @@
     height: 80%;
     color: black;
     width: 90%;
+    background-color: transparent;
   }
   #flex{
     flex-direction: row;
@@ -220,6 +222,10 @@ html{
 }
 .experience{
   background: whitesmoke;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: black;
+
 }
 ::selection{
   color: blue;
@@ -359,4 +365,44 @@ html{
 }
 #innercard{
   background-color: transparent;
+  color: black;
+}
+.projects{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: black;
+}
+.card-header-title{
+  color: #ff7979;
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity:1;
+}
+.progress{
+  color: #ff7979;
+
+}
+.title{
+  font-weight: bold;
+  font-size: 35px;
+}
+img{
+  box-sizing: border-box;
+  display: flex;
+  padding-top: -200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile{
+  width: 150px;
+  clip-path: circle();
+
 }

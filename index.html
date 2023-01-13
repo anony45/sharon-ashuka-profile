@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>findashuka.com</title>
+    <title>find ashuka.com</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
@@ -11,8 +11,31 @@
     <script src="https://kit.fontawesome.com/96e61fe6fa.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!--script part-->
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+  
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+  
+        for(var i = 0; i < reveals.length; i++){
+  
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+  
+          if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
+  
    <!--landing page-->
-  <section class="landingpage">
+  <section class="landingpage ">
     <div class="container">
         <div>
             <h1 id="animate"> Hello,<span></span> </h1>
@@ -25,36 +48,34 @@
     </div>
   </section>
   <!--Aboutpage -->
-  <section class="about and skills has-background-info-light">
+  <section class="about has-background-info-light reveal">
+    <div class="title has-text-centered p-3 ">About & Skills</div>
     <div class="container has-background-info-light">
       <div class="card has-background-light">
         <div class="columns is-gapless ">
           <div class="column" id="innercard">
             <div class="notification">
-              <h1 class="subtitle has-text-centered">About Me.</h1>
-              <h1 class="subtitle">Personal Statement.</h1>
+              <div class="">
+                <img class="profile " src="/images/profile picture.jpg" >
+              </div>
+
+            
+              <h1 class="subtitle has-text-centered has-text-warning-dark">About Me.</h1>
               <p class="block is-justify-content-center m-2 " id="paragraph">
-                Hello! My name is Sharon and I enjoy creating things that live on the internet.
-                 My interest in web development started back in 2018 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!<br><br>
-                 Fast-forward to today,  I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. 
+                Hello! My name is Ashuka and I enjoy creating things that live on the internet.
+                 My interest in web designing and developing websites, started back in 2018 when I 
+                 decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!<br><br>
+                 Fast-forward to today,  I’ve had the privilege of working at a, a start-up as a software developer intern as well as software quality assurance intern.
+                My greatest passion is in life is using my technical know-how to benefit other people and organisations.
                 My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
-                I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
-  
-              </p>
-              <p class="block is-justify-content-center m-2 " id="paragraph">
-                Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
-
-Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
-
-I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
-  
+                
               </p>
             </div>          
           </div>
           <div class="column ">
             <div class="notification">
-              <h2 class="subtitle has-text-centered">My technology toolbox</h2>
-              <h3 class="subtitle ">Front end Stack</h3>
+              <h2 class="title has-text-centered">My technology toolbox</h2>
+              <h3 class="subtitle has-text-warning-dark">Front end Stack</h3>
               <ul class="block">  
                 <li>
                   <i class="fa-brands fa-2x fa-html5 p-2"></i>HTML5
@@ -76,14 +97,14 @@ I also recently launched a course that covers everything you need to build a web
                   <progress class="progress is-small is-primary" value="90" max="100">90%</progress>
                 </li>
               </ul>
-              <h3 class="subtitle ">Design</h3>
+              <h3 class="subtitle has-text-warning-dark">Design</h3>
               <ul class="block">
                 <li><i class="fa-brands fa-figma fa-2x p-2"></i> Figma
                   <progress class="progress is-small is-primary" value="70" max="100">90%</progress>
                   
                 </li>
               </ul>
-              <h3 class="subtitle">Others</h3>
+              <h3 class="subtitle has-text-warning-dark">Others</h3>
               <div class="block">
                 <i class="fa-brands fa-git-alt p-2"></i>git
                 <i class="fa-brands fa-github p-2"></i>github
@@ -99,7 +120,7 @@ I also recently launched a course that covers everything you need to build a web
     </div>
   </section>
   <!--Experience -->
-  <section class="experience has-background-info-light">
+  <section class="experience has-background-info-light reveal">
     <div class="title has-text-centered ">Experience</div>
     <div class="container ">
       <div class="wrapper">
@@ -160,19 +181,19 @@ I also recently launched a course that covers everything you need to build a web
   
   </section>
   <!--projects--> 
-  <section class="projects has-background-info-light">
+  <section class="projects has-background-info-light reveal">
+    <h1 class="card-title title has-text-centered">Recent Projects</h1>
     <div class="container ">
-      <div class="card has-background-light" id="card">
-        <h1 class="card-title title has-text-centered">Recent Projects</h1>
+      <div class="card" id="card">      
         <div class="columns is-multiline is-2 p-4" >
-          <div class="column is-one-third ">
+          <div class="column is-one-third transform motion-safe:hover:scale-110">
             <div class="card">
               <div class="card-header">
                 <div class="card-header-title">
-                  <p>shopping cart</p>
+                  <p>Order and Delivery System</p>
                 </div>
                 <button class="card-header-icon">
-                  <i class="fa-thin fa-folder"></i>
+                  <i class="fa-regular fa-folder p-1"></i>
                   <span class="icon"><i class="fa-brands fa-github"></i></span>
                 </button>
               </div>
@@ -186,21 +207,21 @@ I also recently launched a course that covers everything you need to build a web
                 will instantly appear.
   
               </p>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">javascript</a>
-                <a href="#" class="card-footer-item">Vue</a>
-                <a href="#" class="card-footer-item">html</a>
+              <footer class="block has has-text-centered has-text-grey-light ">
+                <i class="p-2">Java</i>
+                <i class="p-2">Xml</i>
+                <i>Firebase</i>
               </footer>
             </div>
           </div>
-          <div class="column is-one-third">
+          <div class="column is-one-third transform motion-safe:hover:scale-110">
             <div class="card">
               <div class="card-header">
                 <div class="card-header-title">
                   <p>shopping cart</p>
                 </div>
                 <button class="card-header-icon">
-                  <i class="fa-thin fa-folder"></i>
+                  <i class="fa-regular fa-folder p-1"></i>
                   <span class="icon"><i class="fa-brands fa-github"></i></span>
                 </button>
               </div>
@@ -213,21 +234,48 @@ I also recently launched a course that covers everything you need to build a web
                 to see and click the button. Your chosen number of paragraphs 
                 will instantly appear.
                 </p>
-                <footer class="card-footer">
-                  <a href="#" class="card-footer-item">javascript</a>
-                  <a href="#" class="card-footer-item">Vue</a>
-                  <a href="#" class="card-footer-item">html</a>
+                <footer class="block has has-text-centered has-text-grey-light ">
+                  <i class="p-2">Java</i>
+                  <i class="p-2">Xml</i>
+                  <i>Firebase</i>
                 </footer>
               </div>     
           </div>
-          <div class="column is-one-third">
+          <div class="column is-one-third transform motion-safe:hover:scale-110">
             <div class="card">
               <div class="card-header">
                 <div class="card-header-title">
                   <p>shopping cart</p>
                 </div>
                 <button class="card-header-icon">
-                  <i class="fa-thin fa-folder"></i>
+                  <i class="fa-regular fa-folder p-1"></i>
+                  <span class="icon"><i class="fa-brands fa-github"></i></span>
+                </button>
+              </div>
+              <p class="block has-text-justified p-4">If you're looking for random paragraphs, 
+                you've come to the right place. When a random word or a 
+                random sentence isn't quite enough, the next logical step 
+                is to find a random paragraph. We created the Random Paragraph 
+                Generator with you in mind. The process is quite simple. 
+                Choose the number of random paragraphs you'd like 
+                to see and click the button. Your chosen number of paragraphs 
+                will instantly appear.  
+              </p>
+              <footer class="block has has-text-centered has-text-grey-light ">
+                <i class="p-2">Java</i>
+                <i class="p-2">Xml</i>
+                <i>Firebase</i>
+              </footer>  
+            </div>        
+          </div>
+          <div class="column is-one-third transform motion-safe:hover:scale-110">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-title">
+                  <p>shopping cart</p>
+                </div>
+                <button class="card-header-icon">
+                  <i class="fa-regular fa-folder p-1"></i>
                   <span class="icon"><i class="fa-brands fa-github"></i></span>
                 </button>
               </div>
@@ -239,80 +287,22 @@ I also recently launched a course that covers everything you need to build a web
                 Choose the number of random paragraphs you'd like 
                 to see and click the button. Your chosen number of paragraphs 
                 will instantly appear.
-  
               </p>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">javascript</a>
-                <a href="#" class="card-footer-item">Vue</a>
-                <a href="#" class="card-footer-item">html</a>
-              </footer>
-  
-            </div>
-            
+            </div>           
           </div>
-          <div class="column is-one-third">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-title">
-                  <p>shopping cart</p>
-                </div>
-                <button class="card-header-icon">
-                  <i class="fa-thin fa-folder"></i>
-                  <span class="icon"><i class="fa-brands fa-github"></i></span>
-                </button>
-              </div>
-              <p class="block has-text-justified p-4">If you're looking for random paragraphs, 
-                you've come to the right place. When a random word or a 
-                random sentence isn't quite enough, the next logical step 
-                is to find a random paragraph. We created the Random Paragraph 
-                Generator with you in mind. The process is quite simple. 
-                Choose the number of random paragraphs you'd like 
-                to see and click the button. Your chosen number of paragraphs 
-                will instantly appear.
-              </p>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">javascript</a>
-                <a href="#" class="card-footer-item">Vue</a>
-                <a href="#" class="card-footer-item">html</a>
-              </footer>
-            </div>
-            
-          </div>
-          <div class="column is-one-third">
-            <div class="card">              <div class="card-header">
-              <div class="card-header-title">
-                <p>shopping cart</p>
-              </div>
-              <button class="card-header-icon">
-                <i class="fa-thin fa-folder"></i>
-                <span class="icon"><i class="fa-brands fa-github"></i></span>
-              </button>
-            </div>              
-              <p class="block has-text-justified p-4">If you're looking for random paragraphs, 
-                you've come to the right place. When a random word or a 
-                random sentence isn't quite enough, the next logical step 
-                is to find a random paragraph. We created the Random Paragraph 
-                Generator with you in mind. The process is quite simple. 
-                Choose the number of random paragraphs you'd like 
-                to see and click the button. Your chosen number of paragraphs 
-                will instantly appear.
-              </p>
-              <footer class="card-footer">
-                <a href="#" class="card-footer-item">javascript</a>
-                <a href="#" class="card-footer-item">Vue</a>
-                <a href="#" class="card-footer-item">html</a>
-              </footer>
-            </div>
-          </div>
+        </div> 
+
+
         </div>
+
       </div>
-      
+     
     </div> 
   </section>
   <!--contact page-->
-  <section class="aboutpage has-background-info-light">    
+  <section class="aboutpage has-background-info-light reveal">    
     <div class="container">
-      <div class="card has-background-light "id="card">
+      <div class="card  "id="card" style="background-color: #ef9273;;">
         <h1 class="title has-text-centered" id="sectiontitle">Get in Touch</h1>
         <div class="columns is-gapless">
           <div class="column  is-vcentered " id="mycard">
@@ -362,7 +352,7 @@ I also recently launched a course that covers everything you need to build a web
                   </div>
                 <div class="field">
                   <div class="control">
-                    <button class="button is-primary is-vcentered">submit
+                    <button class="button is-black is-vcentered">submit
                   </div>
                 </div>
                
@@ -372,10 +362,10 @@ I also recently launched a course that covers everything you need to build a web
           </div>
         </div>
       </div>
-
-
     </div>
+    <div class="has-text-centered">designed and developed by <b>ashuka</b> 2022-2023</div>
   </section>
   </body>
+  
 
 </html>

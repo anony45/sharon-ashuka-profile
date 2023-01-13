@@ -549,6 +549,14 @@ video {
   display: block;
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -557,10 +565,14 @@ video {
   padding: 1rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 /*landing page*/
 
 .landingpage{
-  background-image: url("back.jpg");
+  background-image: url("/image/back.jpg");
   background-position: top center;
   background-color:#E7DEcc;
   height:95%;
@@ -687,8 +699,8 @@ video {
   background-color: #ef9273;
 }
 
-.aboutpage{
-  background-color: #c8d8e4;
+.about{
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #card{
@@ -703,6 +715,7 @@ video {
     height: 80%;
     color: black;
     width: 90%;
+    background-color: transparent;
   }
 
   #flex{
@@ -795,6 +808,9 @@ html{
 
 .experience{
   background: whitesmoke;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: black;
 }
 
 ::-moz-selection{
@@ -966,4 +982,58 @@ html{
 
 #innercard{
   background-color: transparent;
+  color: black;
+}
+
+.projects{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+.card-header-title{
+  color: #ff7979;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity:1;
+}
+
+.progress{
+  color: #ff7979;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 35px;
+}
+
+img{
+  box-sizing: border-box;
+  display: flex;
+  padding-top: -200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile{
+  width: 150px;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-safe\:hover\:scale-110:hover {
+    --tw-scale-x: 1.1;
+    --tw-scale-y: 1.1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
 }
