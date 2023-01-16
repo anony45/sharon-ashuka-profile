@@ -32,10 +32,48 @@
           }
         }
       }
+      function opentab(name) {
+        var i;
+        var x = document.getElementsByClassName("projects");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        document.getElementById(name).style.display = "block";  
+}
       </script>
   
    <!--landing page-->
   <section class="landingpage ">
+    <nav class="navbar is-transparent">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+        </a>
+        <div class="navbar-burger" data-target="navigation" aria-label="menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>    
+      <div class="navbar-menu" id="navigation" role="button">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#">
+            Home
+          </a>
+          <a class="navbar-item" href="#about">
+            About Me
+          </a>
+          <a class="navbar-item" href="#experience">
+            Experience
+          </a>
+          <a class="navbar-item" href="#projectspart">
+            projects
+          </a>
+          <a class="navbar-item" href="#aboutpage">
+            Contact me.
+          </a>
+        </div>
+      </div>
+    </nav>
     <div class="container">
         <div>
             <h1 id="animate"> Hello,<span></span> </h1>
@@ -48,7 +86,7 @@
     </div>
   </section>
   <!--Aboutpage -->
-  <section class="about has-background-info-light reveal">
+  <section class="about has-background-info-light reveal" id="about">
     <div class="title has-text-centered p-3 ">About & Skills</div>
     <div class="container has-background-info-light">
       <div class="card has-background-light">
@@ -57,17 +95,17 @@
             <div class="notification">
               <div class="">
                 <img class="profile " src="/images/profile picture.jpg" >
-              </div>
-
-            
+              </div>            
               <h1 class="subtitle has-text-centered has-text-warning-dark">About Me.</h1>
               <p class="block is-justify-content-center m-2 " id="paragraph">
                 Hello! My name is Ashuka and I enjoy creating things that live on the internet.
                  My interest in web designing and developing websites, started back in 2018 when I 
-                 decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!<br><br>
-                 Fast-forward to today,  I’ve had the privilege of working at a, a start-up as a software developer intern as well as software quality assurance intern.
-                My greatest passion is in life is using my technical know-how to benefit other people and organisations.
-                My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+                 joined my first club in campus and i saw they were creating a certain demo website.It was soo interesting 
+                 to see how just one line of code could change the outlook of a webpage.That first time experience taught me a lot about HTML & CSS!<br><br>
+
+                Fast-forward to today,  I’ve had the privilege of working at a, a start-up as a software developer intern as well as software quality assurance analyst intern.It is fascinating 
+                how these two parts compliment each other so well.So my greatest passion is in life is using my technical know-how to  create solutions that benefit other people and organisations.
+                My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
                 
               </p>
             </div>          
@@ -120,7 +158,7 @@
     </div>
   </section>
   <!--Experience -->
-  <section class="experience has-background-info-light reveal">
+  <section class="experience has-background-info-light reveal" id="experience">
     <div class="title has-text-centered ">Experience</div>
     <div class="container ">
       <div class="wrapper">
@@ -180,11 +218,19 @@
     </div>
   
   </section>
+
   <!--projects--> 
-  <section class="projects has-background-info-light reveal">
+  <section class="projects has-background-info-light reveal" id="projectspart">
     <h1 class="card-title title has-text-centered">Recent Projects</h1>
     <div class="container ">
-      <div class="card" id="card">      
+      <div class="card" id="card">   
+        <div class="tabs is-centered is-boxed">
+          <ul>
+            <li class="is-active "><a href="#projectspart">General</a></li>
+            <li ><a onclick="opentab('javascriptprojects')">Javascript</a ></li>
+            <li ><a href="#other">Others</a></li>
+          </ul>
+        </div>   
         <div class="columns is-multiline is-2 p-4" >
           <div class="column is-one-third transform motion-safe:hover:scale-110">
             <div class="card">
@@ -197,14 +243,12 @@
                   <span class="icon"><i class="fa-brands fa-github"></i></span>
                 </button>
               </div>
-              <p class="block has-text-justified p-4 card-content">If you're looking for random paragraphs, 
-                you've come to the right place. When a random word or a 
-                random sentence isn't quite enough, the next logical step 
-                is to find a random paragraph. We created the Random Paragraph 
-                Generator with you in mind. The process is quite simple. 
-                Choose the number of random paragraphs you'd like 
-                to see and click the button. Your chosen number of paragraphs 
-                will instantly appear.
+              <p class="block has-text-justified p-4 card-content"> 
+                An android based order and delivery system for groceries,made with java.
+                I used the firebase database for analytics and also to store my data.
+                It has a phone verification for first time users.All the data entered by the admin is stored 
+                at the database making the application lightweight.Check out the full
+                code on the github icon above.
   
               </p>
               <footer class="block has has-text-centered has-text-grey-light ">
@@ -218,7 +262,92 @@
             <div class="card">
               <div class="card-header">
                 <div class="card-header-title">
-                  <p>shopping cart</p>
+                  <p>Responsive form with vue</p>
+                </div>
+                <button class="card-header-icon">
+                  <i class="fa-regular fa-folder p-1"></i>
+                  <span class="icon"><i class="fa-brands fa-github"></i></span>
+                </button>
+              </div>
+              <p class="block has-text-justified p-4">A responsive login and registration form made with vue js framework.
+                I also used vuetify as its css framework and nuxt js for its folder structure.The form is responsive to all 
+                screen sizes .The form fetches data from an api countries.Filters the data and then displays the required country as 
+                the first element.
+                </p>
+                <footer class="block has has-text-centered has-text-grey-light ">
+                  <i class="p-2">Vue</i>
+                  <i class="p-2">Vuetify</i>
+                  <i>Nuxt js</i>
+                </footer>
+              </div>     
+          </div>
+          <div class="column is-one-third transform motion-safe:hover:scale-110">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-title">
+                  <p>Weather Application</p>
+                </div>
+                <button class="card-header-icon">
+                  <i class="fa-regular fa-folder p-1"></i>
+                  <span class="icon"><i class="fa-brands fa-github"></i></span>
+                </button>
+              </div>
+              <p class="block has-text-justified p-4">A weather app that fetches data from an api and displays the data.
+                You are able to enter the city you are in and the data for that city is displayed.
+              </p>
+              <footer class="block has has-text-centered has-text-grey-light ">
+                <i class="p-2">Javascript</i>
+                <i class="p-2">html</i>
+                <i>css</i>
+              </footer>  
+            </div>        
+          </div>
+          <div class="column is-one-third transform motion-safe:hover:scale-110">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-title">
+                  <p>A creative landing page</p>
+                </div>
+                <button class="card-header-icon">
+                  <i class="fa-regular fa-folder p-1"></i>
+                  <span class="icon"><i class="fa-brands fa-github"></i></span>
+                </button>
+              </div>
+              <p class="block has-text-justified p-4">
+              </p>
+              <footer class="block has has-text-centered has-text-grey-light ">
+                <i class="p-2">Tailwind css</i>
+                <i class="p-2">html</i>
+                <i>Bulma css</i>
+            </div>           
+          </div>
+        </div> 
+
+
+        </div>
+
+      </div>
+     
+    </div> 
+  </section>
+  <!--javascript part-->
+  <section class="projects has-background-info-light reveal" id="javascriptprojects" style="display: none;">
+    <h1 class="card-title title has-text-centered">Recent Projects</h1>
+    <div class="container ">
+      <div class="card" id="card">  
+        <div class="tabs is-centered is-boxed">
+          <ul>
+            <li ><a onclick="opentab('projectspart')">General</a></li>
+            <li class="is-active"><a onclick="opentab('javascriptprojects')">Javascript</a ></li>
+            <li ><a onclick="opentab('javascriptprojects')">Others</a></li>
+          </ul>
+        </div>     
+        <div class="columns is-multiline is-2 p-4" >
+          <div class="column is-one-third transform motion-safe:hover:scale-110">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-header-title">
+                  <p>A chatting app</p>
                 </div>
                 <button class="card-header-icon">
                   <i class="fa-regular fa-folder p-1"></i>
@@ -245,7 +374,7 @@
             <div class="card">
               <div class="card-header">
                 <div class="card-header-title">
-                  <p>shopping cart</p>
+                  <p>A calculator</p>
                 </div>
                 <button class="card-header-icon">
                   <i class="fa-regular fa-folder p-1"></i>
@@ -268,39 +397,13 @@
               </footer>  
             </div>        
           </div>
-          <div class="column is-one-third transform motion-safe:hover:scale-110">
-            <div class="card">
-              <div class="card-header">
-                <div class="card-header-title">
-                  <p>shopping cart</p>
-                </div>
-                <button class="card-header-icon">
-                  <i class="fa-regular fa-folder p-1"></i>
-                  <span class="icon"><i class="fa-brands fa-github"></i></span>
-                </button>
-              </div>
-              <p class="block has-text-justified p-4">If you're looking for random paragraphs, 
-                you've come to the right place. When a random word or a 
-                random sentence isn't quite enough, the next logical step 
-                is to find a random paragraph. We created the Random Paragraph 
-                Generator with you in mind. The process is quite simple. 
-                Choose the number of random paragraphs you'd like 
-                to see and click the button. Your chosen number of paragraphs 
-                will instantly appear.
-              </p>
-            </div>           
-          </div>
-        </div> 
-
-
         </div>
-
-      </div>
-     
+        </div>
+      </div>     
     </div> 
   </section>
   <!--contact page-->
-  <section class="aboutpage has-background-info-light reveal">    
+  <section class="aboutpage has-background-info-light reveal" id="aboutpage">    
     <div class="container">
       <div class="card  "id="card" style="background-color: #ef9273;;">
         <h1 class="title has-text-centered" id="sectiontitle">Get in Touch</h1>
@@ -366,6 +469,4 @@
     <div class="has-text-centered">designed and developed by <b>ashuka</b> 2022-2023</div>
   </section>
   </body>
-  
-
 </html>

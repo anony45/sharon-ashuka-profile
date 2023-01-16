@@ -92,9 +92,7 @@
   @keyframes text_reveler {
     100%{
       color: white;
-
     }
-    
   }
 .button{
     display: inline-block;
